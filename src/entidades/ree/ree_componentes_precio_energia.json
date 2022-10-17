@@ -1,0 +1,115 @@
+{
+  "entidad": "REE",
+  "nombre": "Red Electrica Española",
+  "descripcion": "Componentes precio energia extraidos de la api apidatos",
+  "fecha_inicio": "01/01/2014",
+  "fecha_fin": "mes actual",
+  "periodicidad": "mensual",
+  "ipynb": "ree_componentes_precio_energia",
+  "csv": "",
+  "enlaces_info": [    
+    "https://www.ree.es/es/glosario",
+    "https://www.ree.es/es/actividades/operacion-del-sistema-electrico/procedimientos-de-operacion",
+    "https://www.cnmc.es/"
+  ],
+  "indicadores": [
+    {
+      "nombre": "Mercado diario",
+      "descripcion": "Mercado en el que se llevan a cabo las transacciones de compra y venta de energía eléctrica para el día siguiente completo y es gestionado por el Operador de Mercado.",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Restricciones técnicas PDBF",
+      "descripcion": "Mecanismo integrado en el mercado de producción de energía eléctrica realizado por el operador del sistema consistente en la resolución de las restricciones técnicas identificadas en el Programa Diario Base de Funcionamiento mediante la modificación de los programas de las Unidades de Programación y el posterior proceso de reequilibrio generación-demanda.",
+      "enlaces_info": [
+        "https://www.cnmc.es/sites/default/files/2698872_10.pdf",
+        "https://www.ree.es/es/glosario"
+      ],
+      "unidad": "indicador"
+    },
+    {
+      "nombre": "Banda de regulación secundaria",
+      "descripcion": "La regulación secundaria es un servicio complementario de carácter potestativo que tiene por objeto el mantenimiento del equilibrio generación-demanda, corrigiendo los desvíos respecto al programa de intercambio previsto del Bloque de Control España y las desviaciones de la frecuencia. Su horizonte temporal de actuación alcanza desde los 20 segundos hasta los 15 minutos. Este servicio es retribuido mediante mecanismos de mercado por dos conceptos: disponibilidad (banda de regulación) y utilización (energía). Es equivalente al producto europeo conocido como Servicio automático de recuperación de la frecuencia (aFRR - automatic Frequency Restoration Reserves)",
+      "unidad": "eur",
+      "enlaces_info": ["https://www.cnmc.es/sites/default/files/2784245_9.pdf"]
+    },
+    {
+      "nombre": "Reserva de potencia adicional a subir",
+      "descripcion": "Es el valor de reserva de potencia a subir que pueda ser necesaria con respecto a la disponible en el Programa Diario Viable Provisional (PDVP) para garantizar la seguridad en el sistema eléctrico peninsular español. La contratación y gestión de la reserva de potencia adicional a subir es realizada por el Operador del Sistema mediante un mecanismo de mercado, cuando las condiciones del sistema así lo requieren.",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Restricciones técnicas en tiempo real",
+      "descripcion": "Proceso realizado por el operador del sistema consistente en la resolución de las restricciones técnicas identificadas durante la operación en tiempo real mediante la modificación de los programas de las unidades de programación.",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Restricciones intradiario",
+      "descripcion": "",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Incumplimiento de energía de balance",
+      "descripcion": "Energía incumplida de asignación neta de gestión de desvíos y terciaria",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Coste desvíos",
+      "descripcion": "",
+      "unidad": "eur",
+      "enlaces_info": ["https://www.magnuscmd.com/es/desvios-en-el-sistema-electrico-la-vision-del-consumidor/"]
+    },
+    {
+      "nombre": "Saldo desvíos",
+      "descripcion": "Diferencia entre el importe de la liquidación de los desvíos y de las energías empleadas para mantener el equilibrio generación-demanda.",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Control del factor de potencia",
+      "descripcion": "El artículo 7 apartado e) del Real Decreto 413/2014, de 6 de junio, por el que se regula la actividad de producción de energía eléctrica a partir de fuentes de energía renovables, cogeneración y residuos, establece medidas para el control del factor de potencia de aplicación para las instalaciones dentro del ámbito de este Real Decreto.",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Saldo PO 14.6",
+      "descripcion": "P.O. 14.6 Liquidación de intercambios internacionales no realizados por participantes en el mercado",
+      "unidad": "eur",
+      "enlaces_info": ["https://www.cnmc.es/sites/default/files/editor_contenidos/Energia/Consulta%20Publica/6_DCOOR_DE_003_21_071%20PO-14.6-Liquidaci%C3%B3n%20CCU_CCFR_CC.pdf"]
+    },
+    {
+      "nombre": "Fallo nominación UPG",
+      "descripcion": "",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Servicios de ajuste",
+      "descripcion": "Son aquellos servicios gestionados por el Operador del Sistema que resultan necesarios para asegurar el suministro de energía eléctrica en las condiciones de calidad, fiabilidad y seguridad necesarias. Los servicios de ajuste pueden tener carácter obligatorio o potestativo. Se entienden como servicios de ajuste el mercado de resolución de restricciones técnicas y los mercados de balance, entendidos estos como, los mercados relativos a los servicos de gestión de desvíos, regulación terciaria y regulación secundaria.",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Pagos por capacidad",
+      "descripcion": "Pago regulado para financiar el servicio de capacidad de potencia a medio y largo plazo ofrecido por las instalaciones de generación al sistema eléctrico.",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Servicio de interrumpibilidad",
+      "descripcion": "Es la remuneración que perciben una serie de grandes consumidores de energía por estar dispuestos a no consumir en momentos puntuales de alta demanda del sistema. La nueva normativa cambia la forma en la que se financia este servicio, cuyo coste será soportado por la demanda, es decir, los clientes. Es un servicio controlado por Red Eléctrica de España para asegurar, en todo momento, la estabilidad del sistema eléctrico español. El nuevo impuesto establecido por el Gobierno corresponde a la aplicación de una nueva metodología para financiarlo.",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Precio total (€/MWh)",
+      "descripcion": "",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Energía de cierre (MWh)",
+      "descripcion": "",
+      "unidad": "eur"
+    },
+    {
+      "nombre": "Mercado intradiario (subastas MIBEL y continuo)",
+      "descripcion": "",
+      "unidad": "eur",
+      "enlaces_info": ["https://www.omie.es/sites/default/files/inline-files/mercados_intradiario_y_continuo.pdf"]
+    }
+  ]
+}

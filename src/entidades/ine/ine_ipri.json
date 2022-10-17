@@ -1,0 +1,51 @@
+{
+  "entidad": "INE",
+  "nombre": "Índices de producción industrial",
+  "descripcion": "El Índice de Precios Industriales (IPRI) mide la evolución mensual de los precios de los productos fabricados por la industria y vendidos en el mercado interior en la primera etapa de su comercialización. El IPRI recoge los precios de venta a salida de fábrica obtenidos por los establecimientos industriales en las transacciones que éstos efectúan, excluyendo los gastos de transporte, comercialización, IVA y otros impuestos indirectos facturados. La cobertura del índice se extiende a todos los sectores industriales, excepto la construcción. Por tanto, investiga las industrias extractivas, manufactureras y de suministro de energía eléctrica, gas y agua. Para su obtención se realiza una encuesta continua que recoge todos los meses aproximadamente 28.000 precios de unos 1.500 productos, en una muestra cercana a los 9.000 establecimientos industriales. La información que se recoge son los precios vigentes el día 15 de cada mes.",
+  "fecha_inicio": "01/01/2018",
+  "fecha_fin": "mes actual",
+  "periodicidad": "mensual",
+  "ipynb": "ine_ipri",
+  "csv": "",
+  "enlaces_info": [    
+    "https://www.ine.es/",
+    "https://www.ine.es/daco/daco42/daco423/metoipri2010.pdf"
+  ],
+  "indicadores": [
+    {
+      "nombre": "Total industria",
+      "descripcion": "Indice base 100 en 1995",
+      "unidad": "idx"
+    },
+    {
+      "nombre": "Bienes de consumo duradero",
+      "descripcion": "",
+      "unidad": "idx"
+    },
+    {
+      "nombre": "Bienes de consumo no duradero",
+      "descripcion": "",
+      "unidad": "idx"
+    },
+    {
+      "nombre": "Bienes de equipo",
+      "descripcion": "",
+      "unidad": "idx"
+    },
+    {
+      "nombre": "Bienes intermedios",
+      "descripcion": "",
+      "unidad": "idx"
+    },
+    {
+      "nombre": "Energía",
+      "descripcion": "",
+      "unidad": "idx"
+    },
+    {
+      "nombre": "Total industria sin energía",
+      "descripcion": "",
+      "unidad": "idx"
+    }
+  ]
+}

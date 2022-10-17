@@ -1,0 +1,81 @@
+{
+  "entidad": "INE",
+  "nombre": "IPC Grupos",
+  "descripcion": "El Índice de Precios de Consumo (IPC) tiene como objetivo medir la evolución de los precios de los bienes y servicios de consumo adquiridos por los hogares residentes en España.",
+  "fecha_inicio": "01/01/2002",
+  "fecha_fin": "mes actual",
+  "periodicidad": "mensual",
+  "ipynb": "ine_ipc",
+  "csv": "ine_ipc",
+  "enlaces_info": [
+    "https://www.ine.es/",
+    "https://www.ine.es/dynt3/metadatos/es/RespuestaDatos.html?oe=30138"
+  ],
+  "indicadores": [
+    {
+      "nombre": "Índice general",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "01 Alimentos y bebidas no alcohólica",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "02 Bebidas alcohólicas y tabaco",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "03 Vestido y calzad",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "04 Vivienda, agua, electricidad, gas y otros combustible",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "05 Muebles, artículos del hogar y artículos para el mantenimiento corriente del hoga",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "06 Sanidad",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "07 Transporte",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "08 Comunicacione",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "09 Ocio y cultura",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "10 Enseñanza",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "11 Restaurantes y hotele",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "12 Otros bienes y servici",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    }
+  ]
+}

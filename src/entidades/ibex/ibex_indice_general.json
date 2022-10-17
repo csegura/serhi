@@ -1,0 +1,34 @@
+{
+    "entidad": "IBEX",
+    "nombre": "Índice general Ibex 35",
+    "descripcion": "",
+    "fecha_inicio": "12/07/1993",
+    "fecha_fin": "mes actual",
+    "periodicidad": "diaria",
+    "ipynb": "ibex_indice_general",
+    "csv": "",
+    "enlaces_info": [    
+    ],
+    "indicadores": [    
+      {
+        "nombre": "High",
+        "descripcion": "Máxima del dia",
+        "unidad": "idx"
+      },
+      {
+        "nombre": "Low",
+        "descripcion": "Mínima del dia",
+        "unidad": "idx"
+      },
+      {
+        "nombre": "Close",
+        "descripcion": "Cierre",
+        "unidad": "idx"
+      },
+      {
+        "nombre": "Volume",
+        "descripcion": "Volumen negociado",
+        "unidad": "idx"
+      }
+      ]
+}
