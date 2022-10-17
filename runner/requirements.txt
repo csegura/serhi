@@ -1,0 +1,7 @@
+json5
+requests
+openpyxl
+pandas
+sklearn
+matplotlib
+IPython
