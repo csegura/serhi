@@ -1,0 +1,73 @@
+2022-10-17 21:44:38.334283 | *** RUNNER *** | 0
+2022-10-17 21:44:53.294697 | exec_notebook | 0
+2022-10-17 21:44:53.294826 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ibex/ibex_indice_general.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ibex | 0
+2022-10-17 21:44:54.443599 | convert_notebook | 0
+2022-10-17 21:44:54.443718 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ibex/ibex_indice_general.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ibex | 0
+2022-10-17 21:44:54.451824 | initial html src notebook | 0
+2022-10-17 21:44:54.459049 | copy_files | [0, 0]
+2022-10-17 21:45:09.973392 | exec_notebook | 0
+2022-10-17 21:45:09.973519 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ree/ree_componentes_precio_energia.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ree | 0
+2022-10-17 21:45:11.006531 | convert_notebook | 0
+2022-10-17 21:45:11.006651 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ree/ree_componentes_precio_energia.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ree | 0
+2022-10-17 21:45:11.009643 | initial html src notebook | 0
+2022-10-17 21:45:11.013298 | copy_files | [0]
+2022-10-17 21:45:16.473542 | exec_notebook | 0
+2022-10-17 21:45:16.473666 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ibex/ibex_indice_general.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ibex | 0
+2022-10-17 21:45:17.548903 | convert_notebook | 0
+2022-10-17 21:45:17.549031 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ibex/ibex_indice_general.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ibex | 0
+2022-10-17 21:45:17.556478 | copy_files | [0, 0]
+2022-10-17 21:45:27.811318 | exec_notebook | 0
+2022-10-17 21:45:27.811450 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipc.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:45:43.880646 | exec_notebook | 0
+2022-10-17 21:45:43.880778 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipri.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:45:51.312400 | exec_notebook | 0
+2022-10-17 21:45:51.312564 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipv.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:45:52.428319 | convert_notebook | 0
+2022-10-17 21:45:52.428447 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipc.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:45:52.431872 | initial html src notebook | 0
+2022-10-17 21:45:53.525382 | convert_notebook | 0
+2022-10-17 21:45:53.525513 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipri.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:45:53.529116 | initial html src notebook | 0
+2022-10-17 21:45:54.633263 | convert_notebook | 0
+2022-10-17 21:45:54.633400 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipv.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:45:54.636578 | initial html src notebook | 0
+2022-10-17 21:45:54.650311 | copy_files | [0, 0, 0, 0]
+2022-10-17 21:46:02.797794 | exec_notebook | 0
+2022-10-17 21:46:02.797930 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipc.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:46:18.380769 | exec_notebook | 0
+2022-10-17 21:46:18.380905 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipri.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:46:25.998324 | exec_notebook | 0
+2022-10-17 21:46:25.998452 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipv.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:46:27.124669 | convert_notebook | 0
+2022-10-17 21:46:27.124793 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipc.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:46:28.221541 | convert_notebook | 0
+2022-10-17 21:46:28.221662 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipri.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:46:29.298654 | convert_notebook | 0
+2022-10-17 21:46:29.298783 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipv.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:46:29.312524 | copy_files | [0, 0, 0, 0]
+2022-10-17 21:46:36.864579 | exec_notebook | 0
+2022-10-17 21:46:36.864706 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipc.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:46:52.575850 | exec_notebook | 0
+2022-10-17 21:46:52.575973 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipri.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:46:59.819559 | exec_notebook | 0
+2022-10-17 21:46:59.819682 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipv.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:00.913019 | convert_notebook | 0
+2022-10-17 21:47:00.913139 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipc.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:01.985668 | convert_notebook | 0
+2022-10-17 21:47:01.985797 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipri.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:03.043631 | convert_notebook | 0
+2022-10-17 21:47:03.043759 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipv.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:03.057783 | copy_files | [0, 0, 0, 0]
+2022-10-17 21:47:10.353381 | exec_notebook | 0
+2022-10-17 21:47:10.353502 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipc.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:26.514377 | exec_notebook | 0
+2022-10-17 21:47:26.514499 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipri.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:33.608174 | exec_notebook | 0
+2022-10-17 21:47:33.608299 | jupyter nbconvert --to notebook --execute /home/runner/work/serhi/serhi/src/entidades/ine/ine_ipv.ipynb --ExecutePreprocessor.kernel_name='python3' --output-dir=/home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:34.715962 | convert_notebook | 0
+2022-10-17 21:47:34.716086 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipc.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:35.802508 | convert_notebook | 0
+2022-10-17 21:47:35.802634 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipri.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:36.855510 | convert_notebook | 0
+2022-10-17 21:47:36.855639 | jupyter nbconvert /home/runner/work/serhi/serhi/data/notebooks/ine/ine_ipv.ipynb --to html --output-dir /home/runner/work/serhi/serhi/data/notebooks/ine | 0
+2022-10-17 21:47:36.869485 | copy_files | [0, 0, 0, 0]

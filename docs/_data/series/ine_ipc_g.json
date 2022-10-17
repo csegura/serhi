@@ -1,0 +1,221 @@
+{
+  "entidad": "INE",
+  "nombre": "IPC Sub-Grupos",
+  "descripcion": "El Índice de Precios de Consumo (IPC) tiene como objetivo medir la evolución de los precios de los bienes y servicios de consumo adquiridos por los hogares residentes en España.",
+  "fecha_inicio": "01/01/2002",
+  "fecha_fin": "mes actual",
+  "periodicidad": "mensual",
+  "ipynb": "ine_ipc",
+  "csv": "ine_ipc_g",
+  "enlaces_info": [
+    "https://www.ine.es/",
+    "https://www.ine.es/dynt3/metadatos/es/RespuestaDatos.html?oe=30138"
+  ],
+  "indicadores": [
+    {
+      "nombre": "011 Alimentos",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "012 Bebidas no alcohólicas",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "021 Bebidas alcohólicas ",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "022 Tabaco",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "031 Vestido",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "032 Calzado y sus reparaciones",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "041 Alquiler de vivienda",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "043 Conservación y reparación de la vivienda",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "044 Suministro de agua y otros servicios relacionados con la vivienda",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "045 Electricidad, gas y otros combustibles",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "051 Muebles y accesorios, alfombras y otros revestimientos de suelos",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "052 Artículos textiles para el hogar",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "053 Aparatos domésticos",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "054 Cristalería, vajilla y utensilios para el hogar",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "055 Herramientas y equipos para el hogar y el jardín  ",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "056 Bienes y servicios para el mantenimiento corriente del hogar",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "061 Productos, aparatos y equipos médicos",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "062 Servicios ambulatorios",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "063 Servicios hospitalarios",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "071 Adquisición de vehículos",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "072 Utilización de vehículos personales",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "073 Servicios de transporte",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "082 Equipos de telefonía y fax",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "083 Servicios de telefonía y fax",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "091 Equipos audiovisuales, fotográficos y de procesamiento de información",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "093 Otros artículos y equipos para ocio, jardinería y animales domésticos",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "094 Servicios recreativos, deportivos y culturales",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "095 Prensa, libros y artículos de papelería",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "096 Paquetes turísticos",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "101 Enseñanza Infantil y Primaria",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "102 Enseñanza Secundaria'",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "104 Enseñanza Superior",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "105 Enseñanza no definida por nivel",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "111 Restauración y comedores",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "112 Servicios de alojamiento '",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "121 Cuidado personal",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "123 Efectos personales n.c.o.p.'",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "124 Protección social",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "125 Seguros'",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "126 Servicios financieros n.c.o.p.",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    },
+    {
+      "nombre": "127 Otros servicios n.c.o.",
+      "descripcion": "",
+      "unidad": "idx,idx_va,idx_vm,idx_vaa"
+    }
+  ]
+}
