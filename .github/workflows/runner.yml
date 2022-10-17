@@ -1,0 +1,38 @@
+name: Runner
+
+# Controls when the workflow will run
+on: [workflow_dispatch]
+  # when the job should run; e.g. on push or on a schedule
+jobs:
+  notebook_update:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    env:
+      A: 1
+      # any environment variables needed
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip -r ./runner/requirements.txt
+      - name: Update notebooks
+        run: |
+          python -m pip install jupyter nbconvert nbformat
+          find "$PWD" -type f
+          runner/cron.py
+          pwd
+          cat runner/cron/all.txt
+          runner/run.py runner/cron/all.txt
+          ls -R
+          git status
+      - name: commit updated notebook and data
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: bot
+          message: "Updated"
