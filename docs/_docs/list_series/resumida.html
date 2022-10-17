@@ -1,0 +1,35 @@
+---
+title: Grupos de Series
+category: Series
+layout: default
+---
+
+{% assign series = site.data.series %} 
+
+<table class="resumida">
+    {% for sd in series %} 
+    {% assign serie = sd[1] %}
+  <tr>
+    <td>
+      <h6>
+        <span class="entidad left">{{ serie.entidad }}</span>
+        <a
+          href="{{ site.baseurl }}/series{{ serie.nombre | datapage_url: dir }}"
+        >
+          {{ serie.nombre }}
+        </a>
+      </h6>
+      <h6>{{ serie.ipynb }}</h6>
+      <p>{{ serie.descripcion | truncate: 100, "..." }}</p>
+    </td>
+    <td>
+      <span class="label">inicio</span>
+      <span class="value">{{ serie.fecha_inicio }}</span><br />
+      <span class="label">fin</span>
+      <span class="value">{{ serie.fecha_fin }}</span><br />
+      <span class="label">periodicidad</span>
+      <span class="value">{{ serie.periodicidad }}</span>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
