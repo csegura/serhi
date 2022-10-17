@@ -1,0 +1,8 @@
+tmp/*
+.ipynb_checkpoints
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+docs/_site
+__pycache__/
+Gemfile.lock
