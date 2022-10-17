@@ -1,0 +1,6 @@
+{% assign uds = unidades | split: ',' %}
+{% for c in uds %}
+    <span class="unidad {{c}}">
+        {{ c }} 
+    </span>
+{% endfor %}

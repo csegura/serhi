@@ -1,0 +1,30 @@
+<script lang="javascript">
+    var _page = JSON.parse(
+      decodeURIComponent("{{ page | jsonify | uri_escape }}")
+    );
+    var _site = JSON.parse(
+      decodeURIComponent("{{ site | jsonify | uri_escape }}")
+    );
+    var _content = JSON.parse(
+      decodeURIComponent("{{ content | jsonify | uri_escape }}")
+    );
+    var _paginator = JSON.parse(
+      decodeURIComponent("{{ paginator | jsonify | uri_escape }}")
+    );
+    var _layout = JSON.parse(
+      decodeURIComponent("{{ layout  | jsonify | uri_escape }}")
+    );
+    var _theme = JSON.parse(
+      decodeURIComponent("{{ theme  | jsonify | uri_escape }}")
+    );
+    var _sets = JSON.parse(
+      decodeURIComponent("{{ site.data.series  | jsonify | uri_escape }}")
+    );
+    console.dir(_page);
+    console.dir(_site);
+    console.dir(_content);
+    console.dir(_paginator);
+    console.dir(_layout);
+    console.dir(_theme);
+    console.dir(_sets);
+  </script>

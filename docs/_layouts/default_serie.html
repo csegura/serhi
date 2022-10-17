@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+ 
+<html>
+	{% include _head.html %}
+	<body>
+		{% include _sidebar.html %}
+		<section class="main">
+			{% include _serie_header.html %}
+			<article class="container series">
+				{{ content }}
+			</article>
+		</section>
+	</body>
+</html>

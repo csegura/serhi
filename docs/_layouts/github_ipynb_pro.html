@@ -1,0 +1,21 @@
+---
+layout: default_serie
+category: serie
+---   
+
+<iframe src="https://htmlpreview.github.io/?https://github.com/csegura/serhi/blob/main/data/notebooks/{{ page.entidad | downcase }}/{{ page.ipynb }}.html" 
+    frameborder="0"
+    onload="resizeIframe(this)">
+    Viewer requires iframe.
+</iframe>
+
+<script>
+  // sandbox="allow-scripts allow-same-origin allow-top-navigation" 
+  function resizeIframe(obj) {   
+    console.log(obj)
+    let header = document.querySelector(".page-header-nb");
+    console.log(header)
+
+    obj.style.height = (window.document.documentElement.scrollHeight - header.offsetHeight - 30 ) + 'px';        
+  }
+</script>

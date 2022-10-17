@@ -1,0 +1,89 @@
+$green: #a6e22a;
+$blue: #69ccdd;
+$yellow: #73cb7d;
+$magenta: #eb8e75;
+$greylight: #e6e6e6;
+$original: #eee;
+$background: #383830;
+$grey: #595959;
+$violet: #ae81ff;
+
+.highlight {
+  width: 97%;
+  margin: 1px auto;
+  font-size: 16px;
+  line-height: 1.2em;
+  background-color: $background;
+  color: $original;
+  padding: 1px;
+  .lineno {
+    margin: 3px;
+    font-size: 16px;
+    color: $greylight;
+  }
+  .c,
+  .cm,
+  .cp,
+  .c1,
+  .cs {
+    /* comment */
+    color: $grey;
+  }
+  .k,
+  .kc,
+  .kd,
+  .kn,
+  .kp,
+  .kr,
+  .kt,
+  .o,
+  .nt {
+    /* key word*/
+    color: $magenta;
+  }
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .mo {
+    /*number*/
+    color: $violet;
+  }
+  .s,
+  .sb,
+  .sc,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .sr,
+  .s1,
+  .ss {
+    /*string*/
+    color: $yellow;
+  }
+  .nf,
+  .na,
+  .nc {
+    color: $green;
+  }
+  .css .k,
+  .nb,
+  .kd,
+  .n {
+    font-style: italic;
+    color: $blue;
+  }
+  .bash .nv {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  .language-bash & .nb {
+    color: #99d4ff;
+  }
+}

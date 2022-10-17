@@ -1,0 +1,26 @@
+<section class="main">
+    <div class="page-header-nb">
+        {% if page.subtitle != nil %}
+            <h1 class="with-subtitle">{{ page.title }}</h1>
+        {% else %}
+            <h1>{{ page.title }}</h1>
+        {% endif %}        
+        {% if page.category != "main" %}
+            <h2>{{ page.category }}</h2>    
+        {% endif %}
+        {% if page.subtitle != nil %}
+            <h2>{{ page.subtitle }}</h2>
+        {% endif %}
+        <!-- {% if page.date != blank %}
+            <h6>{{ page.date | date: '%B %d, %Y' }}</h6>
+        {% endif %} -->
+    </div>
+    <article class="container series">
+        {{ content }} 
+    </article>
+</section>
+<script>
+    document.getElementById("open-nav").addEventListener("click", function () {
+        document.body.classList.toggle("nav-open");
+    });
+</script>

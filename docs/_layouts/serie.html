@@ -1,0 +1,52 @@
+---
+layout: default_serie
+category: serie
+---
+
+<div>
+  <p>{{ page.descripcion }}</p>
+  <table>
+    <tr class="info">
+      <td>Fecha Inicio</td>
+      <td>Fecha Fin</td>
+      <td>Periodicidad</td>
+    </tr>
+    <tr class="info">
+      <td class="value">{{ page.fecha_inicio }}</td>
+      <td class="value">{{ page.fecha_fin }}</td>
+      <td class="value">{{ page.periodicidad }}</td>
+    </tr>
+    <tr>
+      <td colspan="3" >
+        <ul class="columns2">
+          {% for lnk in page.enlaces_info %}
+          <li>
+            <small><a href="{{lnk}}">{{ lnk }}</a></small>
+          </li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    {% for ind in page.indicadores %}
+
+    <tr>
+      <td>
+        {% capture unidades %}{{ ind.unidad }}{% endcapture %}
+        {% include _unidades.html unidades='unidades' %}
+        <h6>{{ ind.nombre }}</h6>
+      </td>
+      <td>
+        {{ ind.descripcion }}<br />
+        {% for lnk in ind.enlaces_info %}
+        <li>
+          <small><a href="{{lnk}}">{{ lnk }}</a></small>
+        </li>
+        {% endfor %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>

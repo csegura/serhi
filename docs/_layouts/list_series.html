@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+{% for sd in site.data.series %} 
+{% assign serie = sd[1] %}
+  <table>
+  <tr>
+    <td>
+      <h4>
+        <span class="entidad left">{{ serie.entidad }}</span>
+        <a
+          href="{{ site.baseurl }}/series{{ serie.nombre | datapage_url: dir }}"
+        >
+          {{ serie.ipynb }}
+        </a>
+      </h4>
+      <p>{{ serie.descripcion }}</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="info">
+      <span class="label">inicio</span>
+      <span class="value">{{ serie.fecha_inicio }}</span><br />
+      <span class="label">fin</span>
+      <span class="value">{{ serie.fecha_fin }}</span><br />
+      <span class="label">periodicidad</span>
+      <span class="value">{{ serie.periodicidad }}</span>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <ul class="indicadores">
+        {% for ind in serie.indicadores %}
+          <li>            
+            {% capture unidades %}{{ ind.unidad }}{% endcapture %}
+            {% include _unidades.html unidades='unidades' %}            
+            {{ ind.nombre }} 
+          </li>
+        {% endfor %}
+      </ul>
+    </td>
+  </tr>
+</table>
+{% endfor %}
+

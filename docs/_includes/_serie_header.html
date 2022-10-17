@@ -1,0 +1,36 @@
+<div class="page-header-nb series">
+    <span class="entidad badge-left">{{ page.entidad }}</span>
+    <a href="/serhi/docu/list_series/index/"><h4>{{ page.nombre }}</h4></a>
+    <h3>{{ page.ipynb }}</h3>
+    <div class="flex mb-10">
+        {% if page.csv != "" %}
+            {% assign file = page.csv %}
+        {% else %}
+            {% assign file = page.ipynb %}
+        {% endif %}
+        <a href="https://raw.githubusercontent.com/csegura/serhi/main/data/process/{{ page.entidad | downcase }}/{{ file }}.csv" download>
+            {% include _badge.html text="download" status="CSV" color="blue" %}
+        </a>
+        
+        {% if page.path contains "ipynb_pro" %}
+            <a href="{{ site.baseurl }}/series{{ page.nombre | datapage_url: dir }}">
+                {% include _badge.html text="ver" status="detalles" color="orange" %}
+            </a>
+        {% else %}
+        <a href="{{ site.baseurl }}/ipynb_pro{{ page.nombre | datapage_url: dir }}">
+            {% include _badge.html text="notebook" status="procesado" color="green" %}
+        </a>
+        {% endif %}  
+       
+        {% if page.path contains "ipynb_src" %}
+            <a href="{{ site.baseurl }}/series{{ page.nombre | datapage_url: dir }}">
+                {% include _badge.html text="ver" status="detalles" color="orange" %}
+            </a>
+        {% else %}
+            <a href="{{ site.baseurl }}/ipynb_src{{ page.nombre | datapage_url: dir }}">
+                {% include _badge.html text="notebook" status="original" color="orange" %}        
+            </a>
+        {% endif %}        
+    </div>
+</div>
+
