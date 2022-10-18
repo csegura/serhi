@@ -30,5 +30,5 @@ Para documentar las series descargadas y que formarán parte del conjunto se cre
 - [x] Página con el estado de las últimas actualizaciones
 - [ ] API REST para consulta
     - [ ] url/set/from_date/to_date    
-- [ ] Documentación
-    - [ ] (entity).json 
+- [x] Documentación
+    - [x] (entity).json 
