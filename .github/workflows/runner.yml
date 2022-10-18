@@ -8,11 +8,17 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      A: 1
+      LANG: "es_ES.UTF-8"
+      LC-ALL: "es_ES.UTF-8"
       # any environment variables needed
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Set locale
+        run: | 
+          sudo apt-get install locales
+          sudo locale-gen ${{ env.LANG }}
+          sudo update-locale LANG=${{ env.LANG }}
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Set up Python
