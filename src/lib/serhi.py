@@ -1,19 +1,26 @@
 # RUNNER
 # ajustes para guardar los archivos donde corresponda
 import os
+from pathlib import Path
+import requests
 
 def initialize(entyty, name):
     global CWD
+    global HOME
     global BASE_PATH
     global DATA_PATH
     global DOWN_PATH
     global OUT_FILE
 
     CWD = os.getcwd()
+    HOME = Path().home()
 
     if CWD.find("runner") == -1:
         # our jupyter
-        BASE_PATH = "../../.."
+        if CWD == str(HOME):
+            BASE_PATH = './serhi'
+        else:
+            BASE_PATH = "../../.."
     else:
         # we are on github action
         BASE_PATH = "/home/runner/work/serhi/serhi"
@@ -24,6 +31,7 @@ def initialize(entyty, name):
     OUT_FILE = f"{DATA_PATH}{name}.csv"
 
     os.system(f"echo serhi.CWD       {CWD}")
+    os.system(f"echo serhi.HOME      {HOME}")
     os.system(f"echo serhi.BASE_PATH {BASE_PATH}")
     os.system(f"echo serhi.DATA_PATH {DATA_PATH}")
     os.system(f"echo serhi.DOWN_PATH {DOWN_PATH}")
@@ -34,5 +42,13 @@ def initialize(entyty, name):
 
     if not os.path.exists(DOWN_PATH):
         os.makedirs(DOWN_PATH, exist_ok=True)
+
+# Download files
+def download_files(urls):
+    for loc in urls:
+        url = loc['url']
+        r = requests.get(url, allow_redirects=True)
+        print(f'Downloading {url}')
+        open(DOWN_PATH +  loc['file'], 'wb').write(r.content)
 
 print('SerHi Tools')
