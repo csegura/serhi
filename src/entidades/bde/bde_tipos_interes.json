@@ -43,7 +43,7 @@
     { "nombre": "Tipo de interés. De referencia. Mercado hipotecario. Interbancario.Fecha BOE'", "descripcion": "", "unidad": "date" },
     { "nombre": "Tipo de interés. De referencia. Mercado hipotecario. Tipo medio préstamos hipotecarios.Fecha BOE'", "descripcion": "", "unidad": "date" },
     { "nombre": "Tipo de interés. De referencia. Mercado hipotecario. Deuda Pública de 2 a 6 años.Fecha BOE'", "descripcion": "", "unidad": "date" },
-    { "nombre": "Tipo de interés. De referencia. Mercado hipotecario. Fecha BOE IR", "descripcion": "", "unidad": "date" },
+    { "nombre": "Tipo de interés. De referencia. Mercado hipotecario. Fecha BOE IR", "descripcion": "", "unidad": "date" }
   ]
 }
 
