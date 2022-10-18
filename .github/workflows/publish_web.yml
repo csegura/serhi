@@ -7,7 +7,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
-  # Only trigger, when the build workflow succeeded
+  # Only trigger, when the runner workflow succeeded
   workflow_run:
     workflows: ["runner"]
     types:
@@ -28,7 +28,7 @@ jobs:
           ${{ runner.os }}-gems-
 
     # Specify the target branch (optional)
-    - uses: helaili/jekyll-action@v2
+    - uses: helaili/jekyll-action@v2.4.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         target_branch: 'gh-pages'
