@@ -1,7 +1,7 @@
 ---
-title: Series Historicas de Datos
+title: Series Históricas de Datos
 category: main
----
+---s
 
 Hola!!
 
