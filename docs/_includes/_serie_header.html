@@ -8,7 +8,8 @@
         {% else %}
             {% assign file = page.ipynb %}
         {% endif %}
-        <a href="https://raw.githubusercontent.com/csegura/serhi/main/data/process/{{ page.entidad | downcase }}/{{ file }}.csv" download>
+        <a href="https://raw.githubusercontent.com/csegura/serhi/main/data/process/{{ page.entidad | downcase }}/{{ file }}.csv" 
+        download="{{ file }}.csv" target="_blank">        
             {% include _badge.html text="download" status="CSV" color="blue" %}
         </a>
         
