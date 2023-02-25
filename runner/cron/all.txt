@@ -1,8 +1,8 @@
 ibex:Índice general Ibex 35:ibex_indice_general.ipynb
-ibex:Índice general Ibex 35 Mensual:ibex_indice_general.ipynb
-bde:Banco de España:bde_tipos_interes.ipynb
 ine:IPC Sub-Grupos:ine_ipc.ipynb
 ine:Índices de producción industrial:ine_ipri.ipynb
 ine:IPC Grupos:ine_ipc.ipynb
+ibex:Índice general Ibex 35 Mensual:ibex_indice_general.ipynb
+bde:Banco de España:bde_tipos_interes.ipynb
 ree:Red Electrica Española:ree_componentes_precio_energia.ipynb
 ine:Indices precio vivienda:ine_ipv.ipynb
