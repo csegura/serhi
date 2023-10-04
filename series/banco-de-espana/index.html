@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+ 
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+    <link rel="stylesheet" href="/serhi/css/main.css">
+    <link rel="apple-touch-icon" href="/serhi/assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/favicon.png">
+
+    
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'G-KNBRLHS09Z', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+</head>
+	<body>
+		<header>
+    <h1>
+        <a href="/serhi/"><img src="/serhi/assets/img/img.png" width="40" height="40" alt="SerHi logo"></a>
+        SerHi
+        <button type="button" class="open-nav" id="open-nav"></button>
+    </h1>
+
+    <form action="/serhi/search/" method="get">
+        <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+        <input type="submit" value="Search" style="display: none;">
+    </form>
+
+    <nav class="full-navigation">
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/"></a>
+            </li>
+        </ul>
+
+        
+        
+        <ul>           
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_json/index/">Formato documentación</a>
+                </li>
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_series/index/">Formato Series</a>
+                </li>
+            
+        </ul>
+        
+        
+        
+        
+        <ul>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/ejemplos/ine_ipv/">Ejemplos</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/ejemplos/ine_ipv/">Datos del INE</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/list_series/index/">Series</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/index/">Lista de Series</a>
+                                </li>
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/resumida/">Grupos de Series</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/updates/logs/">Logs</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/updates/logs/">Log de actualizaciones</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+        </ul>
+                      
+
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/changelog/">Change Log</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+		<section class="main">
+			<div class="page-header-nb series">
+    <span class="entidad badge-left">BDE</span>
+    <a href="/serhi/docu/list_series/index/"><h4>Banco de España</h4></a>
+    <h3>bde_tipos_interes</h3>
+    <div class="flex mb-10">
+        
+        <a href="https://raw.githubusercontent.com/csegura/serhi/main/data/process/bde/bde_tipos_interes.csv" 
+        download="bde_tipos_interes.csv" target="_blank">        
+            <div class="sbadge">
+    <div class="name">
+      <span>
+        download
+      </span>
+    </div>
+    <div class="status blue">
+      <span>
+        CSV
+      </span>
+    </div>
+</div>
+        </a>
+        
+        
+        <a href="/serhi/ipynb_pro/banco-de-espana/">
+            <div class="sbadge">
+    <div class="name">
+      <span>
+        notebook
+      </span>
+    </div>
+    <div class="status green">
+      <span>
+        procesado
+      </span>
+    </div>
+</div>
+        </a>
+          
+       
+        
+            <a href="/serhi/ipynb_src/banco-de-espana/">
+                <div class="sbadge">
+    <div class="name">
+      <span>
+        notebook
+      </span>
+    </div>
+    <div class="status orange">
+      <span>
+        original
+      </span>
+    </div>
+</div>        
+            </a>
+                
+    </div>
+</div>
+
+
+			<article class="container series">
+				<div>
+  <p>Información de tipos de interés legales y otros tipos utilizados como referencia, estadísticas de tipos de interés aplicados por las instituciones financieras monetarias a hogares y sociedades no financieras, tipos de interés de los mercados de y mercados de valores.</p>
+  <table>
+    <tr class="info">
+      <td>Fecha Inicio</td>
+      <td>Fecha Fin</td>
+      <td>Periodicidad</td>
+    </tr>
+    <tr class="info">
+      <td class="value">01/01/1973</td>
+      <td class="value">mes actual</td>
+      <td class="value">mensual</td>
+    </tr>
+    <tr>
+      <td colspan="3" >
+        <ul class="columns2">
+          
+          <li>
+            <small><a href="https://www.bde.es/bde/es/">https://www.bde.es/bde/es/</a></small>
+          </li>
+          
+          <li>
+            <small><a href="https://www.bde.es/webbde/es/estadis/infoest/temas/te_tipos.html">https://www.bde.es/webbde/es/estadis/infoest/temas/te_tipos.html</a></small>
+          </li>
+          
+          <li>
+            <small><a href="https://www.bde.es/webbde/es/estadis/infoest/tipos/tipos.html">https://www.bde.es/webbde/es/estadis/infoest/tipos/tipos.html</a></small>
+          </li>
+          
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>MERCADO MONETARIO. TIPOS DE INTERES MERCADO INTERBANCARIO. EURIBOR. A UNA SEMANA.</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>MERCADO MONETARIO. TIPOS DE INTERES MERCADO INTERBANCARIO. EURIBOR. A UN MES.</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>MERCADO MONETARIO. TIPOS DE INTERES MERCADO INTERBANCARIO. EURIBOR. A TRES MES.</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>MERCADO MONETARIO. TIPOS DE INTERES MERCADO INTERBANCARIO. EURIBOR. A SEIS MES.</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. UEM. Mercado monetario. Euríbor. A 12 meses</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. UEM. Mercado monetario. ESTR</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. UEM. Mercado monetario. ESTR.1</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. UEM. Mercado monetario. ESTR.2</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. UEM. Mercado monetario. ESTR.3</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. UEM. Mercado monetario. ESTR.4</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Oficiales. Mercado hipotecario. Tipo medio adq. vivienda libre. Más de 3 años. Conjunto EC España</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Oficiales. Mercado hipotecario. Tipo medio adq. vivienda libre. Entre 1 y 5 años. Conjunto EC UEM</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Oficiales. Mercado hipotecario. interest Rate Swap a 5 años</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Oficiales. Mercado hipotecario. Rendimiento interno Deuda Pública 2 a 6 años. Mercado secundario</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Oficiales. Mercado hipotecario. Interbancario. Mibor a 1 año</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. Tipos legales. Interés legal</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. Tipos legales. interés Ley enjuiciamiento civil</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. Tipos legales. Interés de demora a efectos tributarios</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. Tipos legales. Interés de demora en operaciones comerciales</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Préstamos hipotecarios para calcular el valor de mercado. IRS. A un año</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Préstamos hipotecarios para calcular el valor de mercado. IRS. A dos años</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Préstamos hipotecarios para calcular el valor de mercado. IRS. A tres años</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Préstamos hipotecarios para calcular el valor de mercado. IRS. A cuatro años</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Oficiales. Mercado hipotecario. interest Rate Swap a 5 años.1</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Préstamos hipotecarios para calcular el valor de mercado. IRS. A quince años</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Préstamos hipotecarios para calcular el valor de mercado. IRS. A veinte años</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad %">
+        % 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Préstamos hipotecarios para calcular el valor de mercado. IRS. A treinta año</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad date">
+        date 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Mercado hipotecario. Interbancario.Fecha BOE'</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad date">
+        date 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Mercado hipotecario. Tipo medio préstamos hipotecarios.Fecha BOE'</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad date">
+        date 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Mercado hipotecario. Deuda Pública de 2 a 6 años.Fecha BOE'</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad date">
+        date 
+    </span>
+
+        <h6>Tipo de interés. De referencia. Mercado hipotecario. Fecha BOE IR</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+  </table>
+</div>
+
+			</article>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+ 
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+    <link rel="stylesheet" href="/serhi/css/main.css">
+    <link rel="apple-touch-icon" href="/serhi/assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/favicon.png">
+
+    
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'G-KNBRLHS09Z', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+</head>
+	<body>
+		<header>
+    <h1>
+        <a href="/serhi/"><img src="/serhi/assets/img/img.png" width="40" height="40" alt="SerHi logo"></a>
+        SerHi
+        <button type="button" class="open-nav" id="open-nav"></button>
+    </h1>
+
+    <form action="/serhi/search/" method="get">
+        <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+        <input type="submit" value="Search" style="display: none;">
+    </form>
+
+    <nav class="full-navigation">
+        <ul>
+            <li class="nav-item top-level current">
+                
+                <a href="/serhi/"></a>
+            </li>
+        </ul>
+
+        
+        
+        <ul>           
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_json/index/">Formato documentación</a>
+                </li>
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_series/index/">Formato Series</a>
+                </li>
+            
+        </ul>
+        
+        
+        
+        
+        <ul>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/ejemplos/ine_ipv/">Ejemplos</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/ejemplos/ine_ipv/">Datos del INE</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/list_series/index/">Series</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/index/">Lista de Series</a>
+                                </li>
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/resumida/">Grupos de Series</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/updates/logs/">Logs</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/updates/logs/">Log de actualizaciones</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+        </ul>
+                      
+
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/changelog/">Change Log</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+		<section class="main">
+    <div class="page-header-nb">
+        
+            <h1></h1>
+                
+        
+            <h2>other</h2>    
+        
+        
+        <!-- 
+            <h6></h6>
+         -->
+    </div>
+    <article class="container series">
+        <hr />
+<p>title: Series Históricas de Datos
+category: main
+—s</p>
+
+<p>Hola!!</p>
+
+<p>La idea de este repositorio es generar series de datos uniformes a partir de datos que ya están disponibles públicamente.</p>
+
+<h3 id="como">¿como?</h3>
+
+<p>Cada vez que tengo que hacer alguna exploración de datos uso un notebook de python, que es lo más cómodo. Así que esto funciona con notebooks.</p>
+
+<p>Se crea el notebook, que decarga los datos, los procesa y los guarda en el formato común para las series <a href="/serhi/docu/doc_series/index/">Formato Series</a> el archivo resultante debe ser un csv.</p>
+
+<p>Para documentar las series descargadas y que formarán parte del conjunto se crea un archivo json, este archivo servirá también para generar la documentación correspondiente en este sitio <a href="/serhi/docu/doc_json/index/">Formato Documentación</a></p>
+
+<h2 id="contribuir">Contribuir</h2>
+
+<p>¿A que estas esperando? MD x Twitter</p>
+
+<h2 id="por-hacer">Por hacer</h2>
+
+<h4 id="octubre-2022">Octubre 2022</h4>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Actualizar las series automáticamente
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />acción manual</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />temporizador / github actions</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />day / week / month runners</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Página con el estado de las últimas actualizaciones</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />API REST para consulta
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />url/set/from_date/to_date</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Documentación
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />(entity).json</li>
+    </ul>
+  </li>
+</ul>
+ 
+    </article>
+</section>
+<script>
+    document.getElementById("open-nav").addEventListener("click", function () {
+        document.body.classList.toggle("nav-open");
+    });
+</script>
+
+	</body>
+</html>

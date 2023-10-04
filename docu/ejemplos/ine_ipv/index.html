@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+ 
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+    <link rel="stylesheet" href="/serhi/css/main.css">
+    <link rel="apple-touch-icon" href="/serhi/assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/favicon.png">
+
+    
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'G-KNBRLHS09Z', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+</head>
+	<body>
+		<header>
+    <h1>
+        <a href="/serhi/"><img src="/serhi/assets/img/img.png" width="40" height="40" alt="SerHi logo"></a>
+        SerHi
+        <button type="button" class="open-nav" id="open-nav"></button>
+    </h1>
+
+    <form action="/serhi/search/" method="get">
+        <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+        <input type="submit" value="Search" style="display: none;">
+    </form>
+
+    <nav class="full-navigation">
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/"></a>
+            </li>
+        </ul>
+
+        
+        
+        <ul>           
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_json/index/">Formato documentación</a>
+                </li>
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_series/index/">Formato Series</a>
+                </li>
+            
+        </ul>
+        
+        
+        
+        
+        <ul>
+            
+                <li class="nav-item top-level current"> 
+                    
+                    
+                        <a href="/serhi/docu/ejemplos/ine_ipv/">Ejemplos</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item current">
+                                    <a href="/serhi/docu/ejemplos/ine_ipv/">Datos del INE</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/list_series/index/">Series</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/index/">Lista de Series</a>
+                                </li>
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/resumida/">Grupos de Series</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/updates/logs/">Logs</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/updates/logs/">Log de actualizaciones</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+        </ul>
+                      
+
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/changelog/">Change Log</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+		<section class="main">
+    <div class="page-header-nb">
+        
+            <h1 class="with-subtitle">Datos del INE</h1>
+                
+        
+            <h2>Ejemplos</h2>    
+        
+        
+            <h2>Indices precio vivienda</h2>
+        
+        <!-- 
+            <h6></h6>
+         -->
+    </div>
+    <article class="container series">
+        <table class="doc">
+    <tr>
+        <td>
+        Importamos las cabeceras, solo están disponibles unos pocos paquetes ya que la misión principal es recuperar y transformar datos, y generalmente esto lo hago usando pandas, las últimas líneas son necesarias para importar una biblioteca con los paths, los notebooks los uso desde visual studio (conectado a un servidor ipython remoto), o directamente en jupyter en el servidor remoto y por último los tiene que procesar github en el workflow, en su docker
+        </td>
+        <td>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
+<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="n">mdates</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">cwd</span> <span class="o">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">cwd</span><span class="p">()</span>
+<span class="n">home</span> <span class="o">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">home</span><span class="p">()</span>
+<span class="n">module_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">home</span><span class="si">}</span><span class="s">/serhi/src/lib"</span> <span class="k">if</span> <span class="n">cwd</span> <span class="o">==</span> <span class="n">home</span> <span class="k">else</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">cwd</span><span class="p">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s">/lib"</span>
+<span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">module_path</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">serhi</span></code></pre></figure>
+
+        </td>
+    </tr>
+    <tr>
+        <td>En esta celda pondremos e nombre de la entidad y el nombre del notebook sin extensión</td>
+        <td>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1"># inicio
+# cambiar como corresponda
+</span><span class="n">ENTITY</span> <span class="o">=</span> <span class="s">'ine'</span>
+<span class="n">NB_NAME</span> <span class="o">=</span> <span class="s">'ine_indices'</span></code></pre></figure>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+        Con esta línea inicializamos la biblioteca de serhi, que establece las rutas donde deben gardarse los archivos 
+        </td>
+        <td>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">serhi</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">ENTITY</span><span class="p">,</span> <span class="n">NB_NAME</span><span class="p">,</span> <span class="n">Path</span><span class="p">.</span><span class="n">cwd</span><span class="p">().</span><span class="n">parents</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span></code></pre></figure>
+
+        </td>
+    </tr>
+    <tr>
+        <td>la salida de la celda anterior en un entorno local será algo como esto, una recopilación de las diferentes rutas</td>
+        <td>
+            
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">SerHi Tools
+<span class="nb">dir</span> /home/node/serhi/src/entidades
+serhi.CWD /home/node/serhi/src/entidades/ine
+serhi.BASE_PATH ../../..
+serhi.DATA_PATH ../../../data/process/ine/
+serhi.DOWN_PATH ../../../tmp/download/ine/
+serhi.OUT_FILE ../../../data/process/ine/ine_indices.csv
+            </code></pre></figure>
+
+        </td>
+    </tr>
+    <tr>
+        <td>descargamos datos del instituto nacional de estadistica, los indices del precio de la vivienda, la rura donde se guardará el archivo <code>sergi.DOWN_PATH</code></td>
+        <td>
+            
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">download_files</span><span class="p">(</span><span class="n">urls</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">loc</span> <span class="ow">in</span> <span class="n">urls</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="s">'url'</span><span class="p">]</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Downloading </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+    <span class="nb">open</span><span class="p">(</span><span class="n">serhi</span><span class="p">.</span><span class="n">DOWN_PATH</span> <span class="o">+</span>  <span class="n">loc</span><span class="p">[</span><span class="s">'file'</span><span class="p">],</span> <span class="s">'wb'</span><span class="p">).</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="n">urls</span> <span class="o">=</span> <span class="p">[</span>    
+    <span class="p">{</span>
+    <span class="c1"># indices precios vivienda
+</span>    <span class="s">'url'</span><span class="p">:</span><span class="s">'https://www.ine.es/jaxiT3/files/t/es/xlsx/25171.xlsx?nocab=1'</span><span class="p">,</span>
+    <span class="s">'file'</span><span class="p">:</span><span class="s">'ine_ipv.xlsx'</span>
+    <span class="p">},</span>
+<span class="p">]</span>
+
+<span class="n">download_files</span><span class="p">(</span><span class="n">urls</span><span class="p">)</span>    
+            </code></pre></figure>
+
+        </td>
+    </tr>
+    <tr>
+        <td>leemos el archivo descargado</td>
+        <td>
+            
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">loc</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">file</span> <span class="o">=</span> <span class="n">loc</span><span class="p">[</span><span class="s">'file'</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">serhi</span><span class="p">.</span><span class="n">DOWN_PATH</span> <span class="o">+</span> <span class="nb">file</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">76</span><span class="p">)</span>            
+            </code></pre></figure>
+
+        </td>
+    </tr>
+    <tr>
+        <td>vemos lo que tenemos</td>
+        <td>
+            
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">                        2022T2	2022T1	2021T4	2021T3	2021T2	2021T1	
+0	    Nacional	    NaN	    NaN	    NaN	    NaN	    NaN	    NaN
+1	    General	        141.433	138.742	135.291	133.652	130.937	127.831	
+2	    Vivienda nueva	153.51	153.365	148.64	145.073	141.088	106.098
+3	    Vivienda segun.	139.707	136.511	133.292	132.009	105.803 104.067
+4	    01 Andalucía	NaN	    NaN	    NaN	    NaN	    NaN	    NaN	    
+5       rows × 24 columns         
+            </code></pre></figure>
+
+        </td>
+    </tr>
+    <tr>
+        <td>desc</td>
+        <td>
+            
+        </td>
+    </tr>
+    <!-- template -->
+    <tr>
+        <td>desc</td>
+        <td>
+            
+        </td>
+    </tr>
+</table>
+ 
+    </article>
+</section>
+<script>
+    document.getElementById("open-nav").addEventListener("click", function () {
+        document.body.classList.toggle("nav-open");
+    });
+</script>
+
+	</body>
+</html>

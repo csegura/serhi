@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+ 
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+    <link rel="stylesheet" href="/serhi/css/main.css">
+    <link rel="apple-touch-icon" href="/serhi/assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/favicon.png">
+
+    
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'G-KNBRLHS09Z', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+</head>
+	<body>
+		<header>
+    <h1>
+        <a href="/serhi/"><img src="/serhi/assets/img/img.png" width="40" height="40" alt="SerHi logo"></a>
+        SerHi
+        <button type="button" class="open-nav" id="open-nav"></button>
+    </h1>
+
+    <form action="/serhi/search/" method="get">
+        <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+        <input type="submit" value="Search" style="display: none;">
+    </form>
+
+    <nav class="full-navigation">
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/"></a>
+            </li>
+        </ul>
+
+        
+        
+        <ul>           
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_json/index/">Formato documentación</a>
+                </li>
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_series/index/">Formato Series</a>
+                </li>
+            
+        </ul>
+        
+        
+        
+        
+        <ul>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/ejemplos/ine_ipv/">Ejemplos</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/ejemplos/ine_ipv/">Datos del INE</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/list_series/index/">Series</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/index/">Lista de Series</a>
+                                </li>
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/resumida/">Grupos de Series</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/updates/logs/">Logs</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/updates/logs/">Log de actualizaciones</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+        </ul>
+                      
+
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/changelog/">Change Log</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+		<section class="main">
+			<div class="page-header-nb series">
+    <span class="entidad badge-left">REE</span>
+    <a href="/serhi/docu/list_series/index/"><h4>Red Electrica Española</h4></a>
+    <h3>ree_componentes_precio_energia</h3>
+    <div class="flex mb-10">
+        
+        <a href="https://raw.githubusercontent.com/csegura/serhi/main/data/process/ree/ree_componentes_precio_energia.csv" 
+        download="ree_componentes_precio_energia.csv" target="_blank">        
+            <div class="sbadge">
+    <div class="name">
+      <span>
+        download
+      </span>
+    </div>
+    <div class="status blue">
+      <span>
+        CSV
+      </span>
+    </div>
+</div>
+        </a>
+        
+        
+        <a href="/serhi/ipynb_pro/red-electrica-espanola/">
+            <div class="sbadge">
+    <div class="name">
+      <span>
+        notebook
+      </span>
+    </div>
+    <div class="status green">
+      <span>
+        procesado
+      </span>
+    </div>
+</div>
+        </a>
+          
+       
+        
+            <a href="/serhi/ipynb_src/red-electrica-espanola/">
+                <div class="sbadge">
+    <div class="name">
+      <span>
+        notebook
+      </span>
+    </div>
+    <div class="status orange">
+      <span>
+        original
+      </span>
+    </div>
+</div>        
+            </a>
+                
+    </div>
+</div>
+
+
+			<article class="container series">
+				<div>
+  <p>Componentes precio energia extraidos de la api apidatos</p>
+  <table>
+    <tr class="info">
+      <td>Fecha Inicio</td>
+      <td>Fecha Fin</td>
+      <td>Periodicidad</td>
+    </tr>
+    <tr class="info">
+      <td class="value">01/01/2014</td>
+      <td class="value">mes actual</td>
+      <td class="value">mensual</td>
+    </tr>
+    <tr>
+      <td colspan="3" >
+        <ul class="columns2">
+          
+          <li>
+            <small><a href="https://www.ree.es/es/glosario">https://www.ree.es/es/glosario</a></small>
+          </li>
+          
+          <li>
+            <small><a href="https://www.ree.es/es/actividades/operacion-del-sistema-electrico/procedimientos-de-operacion">https://www.ree.es/es/actividades/operacion-del-sistema-electrico/procedimientos-de-operacion</a></small>
+          </li>
+          
+          <li>
+            <small><a href="https://www.cnmc.es/">https://www.cnmc.es/</a></small>
+          </li>
+          
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Mercado diario</h6>
+      </td>
+      <td>
+        Mercado en el que se llevan a cabo las transacciones de compra y venta de energía eléctrica para el día siguiente completo y es gestionado por el Operador de Mercado.<br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad indicador">
+        indicador 
+    </span>
+
+        <h6>Restricciones técnicas PDBF</h6>
+      </td>
+      <td>
+        Mecanismo integrado en el mercado de producción de energía eléctrica realizado por el operador del sistema consistente en la resolución de las restricciones técnicas identificadas en el Programa Diario Base de Funcionamiento mediante la modificación de los programas de las Unidades de Programación y el posterior proceso de reequilibrio generación-demanda.<br />
+        
+        <li>
+          <small><a href="https://www.cnmc.es/sites/default/files/2698872_10.pdf">https://www.cnmc.es/sites/default/files/2698872_10.pdf</a></small>
+        </li>
+        
+        <li>
+          <small><a href="https://www.ree.es/es/glosario">https://www.ree.es/es/glosario</a></small>
+        </li>
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Banda de regulación secundaria</h6>
+      </td>
+      <td>
+        La regulación secundaria es un servicio complementario de carácter potestativo que tiene por objeto el mantenimiento del equilibrio generación-demanda, corrigiendo los desvíos respecto al programa de intercambio previsto del Bloque de Control España y las desviaciones de la frecuencia. Su horizonte temporal de actuación alcanza desde los 20 segundos hasta los 15 minutos. Este servicio es retribuido mediante mecanismos de mercado por dos conceptos: disponibilidad (banda de regulación) y utilización (energía). Es equivalente al producto europeo conocido como Servicio automático de recuperación de la frecuencia (aFRR - automatic Frequency Restoration Reserves)<br />
+        
+        <li>
+          <small><a href="https://www.cnmc.es/sites/default/files/2784245_9.pdf">https://www.cnmc.es/sites/default/files/2784245_9.pdf</a></small>
+        </li>
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Reserva de potencia adicional a subir</h6>
+      </td>
+      <td>
+        Es el valor de reserva de potencia a subir que pueda ser necesaria con respecto a la disponible en el Programa Diario Viable Provisional (PDVP) para garantizar la seguridad en el sistema eléctrico peninsular español. La contratación y gestión de la reserva de potencia adicional a subir es realizada por el Operador del Sistema mediante un mecanismo de mercado, cuando las condiciones del sistema así lo requieren.<br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Restricciones técnicas en tiempo real</h6>
+      </td>
+      <td>
+        Proceso realizado por el operador del sistema consistente en la resolución de las restricciones técnicas identificadas durante la operación en tiempo real mediante la modificación de los programas de las unidades de programación.<br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Restricciones intradiario</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Incumplimiento de energía de balance</h6>
+      </td>
+      <td>
+        Energía incumplida de asignación neta de gestión de desvíos y terciaria<br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Coste desvíos</h6>
+      </td>
+      <td>
+        <br />
+        
+        <li>
+          <small><a href="https://www.magnuscmd.com/es/desvios-en-el-sistema-electrico-la-vision-del-consumidor/">https://www.magnuscmd.com/es/desvios-en-el-sistema-electrico-la-vision-del-consumidor/</a></small>
+        </li>
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Saldo desvíos</h6>
+      </td>
+      <td>
+        Diferencia entre el importe de la liquidación de los desvíos y de las energías empleadas para mantener el equilibrio generación-demanda.<br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Control del factor de potencia</h6>
+      </td>
+      <td>
+        El artículo 7 apartado e) del Real Decreto 413/2014, de 6 de junio, por el que se regula la actividad de producción de energía eléctrica a partir de fuentes de energía renovables, cogeneración y residuos, establece medidas para el control del factor de potencia de aplicación para las instalaciones dentro del ámbito de este Real Decreto.<br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Saldo PO 14.6</h6>
+      </td>
+      <td>
+        P.O. 14.6 Liquidación de intercambios internacionales no realizados por participantes en el mercado<br />
+        
+        <li>
+          <small><a href="https://www.cnmc.es/sites/default/files/editor_contenidos/Energia/Consulta%20Publica/6_DCOOR_DE_003_21_071%20PO-14.6-Liquidaci%C3%B3n%20CCU_CCFR_CC.pdf">https://www.cnmc.es/sites/default/files/editor_contenidos/Energia/Consulta%20Publica/6_DCOOR_DE_003_21_071%20PO-14.6-Liquidaci%C3%B3n%20CCU_CCFR_CC.pdf</a></small>
+        </li>
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Fallo nominación UPG</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Servicios de ajuste</h6>
+      </td>
+      <td>
+        Son aquellos servicios gestionados por el Operador del Sistema que resultan necesarios para asegurar el suministro de energía eléctrica en las condiciones de calidad, fiabilidad y seguridad necesarias. Los servicios de ajuste pueden tener carácter obligatorio o potestativo. Se entienden como servicios de ajuste el mercado de resolución de restricciones técnicas y los mercados de balance, entendidos estos como, los mercados relativos a los servicos de gestión de desvíos, regulación terciaria y regulación secundaria.<br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Pagos por capacidad</h6>
+      </td>
+      <td>
+        Pago regulado para financiar el servicio de capacidad de potencia a medio y largo plazo ofrecido por las instalaciones de generación al sistema eléctrico.<br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Servicio de interrumpibilidad</h6>
+      </td>
+      <td>
+        Es la remuneración que perciben una serie de grandes consumidores de energía por estar dispuestos a no consumir en momentos puntuales de alta demanda del sistema. La nueva normativa cambia la forma en la que se financia este servicio, cuyo coste será soportado por la demanda, es decir, los clientes. Es un servicio controlado por Red Eléctrica de España para asegurar, en todo momento, la estabilidad del sistema eléctrico español. El nuevo impuesto establecido por el Gobierno corresponde a la aplicación de una nueva metodología para financiarlo.<br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Precio total (€/MWh)</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Energía de cierre (MWh)</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad eur">
+        eur 
+    </span>
+
+        <h6>Mercado intradiario (subastas MIBEL y continuo)</h6>
+      </td>
+      <td>
+        <br />
+        
+        <li>
+          <small><a href="https://www.omie.es/sites/default/files/inline-files/mercados_intradiario_y_continuo.pdf">https://www.omie.es/sites/default/files/inline-files/mercados_intradiario_y_continuo.pdf</a></small>
+        </li>
+        
+      </td>
+    </tr>
+    
+  </table>
+</div>
+
+			</article>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+ 
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+    <link rel="stylesheet" href="/serhi/css/main.css">
+    <link rel="apple-touch-icon" href="/serhi/assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/favicon.png">
+
+    
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'G-KNBRLHS09Z', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+</head>
+	<body>
+		<header>
+    <h1>
+        <a href="/serhi/"><img src="/serhi/assets/img/img.png" width="40" height="40" alt="SerHi logo"></a>
+        SerHi
+        <button type="button" class="open-nav" id="open-nav"></button>
+    </h1>
+
+    <form action="/serhi/search/" method="get">
+        <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+        <input type="submit" value="Search" style="display: none;">
+    </form>
+
+    <nav class="full-navigation">
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/"></a>
+            </li>
+        </ul>
+
+        
+        
+        <ul>           
+            
+                <li class="nav-item top-level current">                     
+                   <a href="/serhi/docu/doc_json/index/">Formato documentación</a>
+                </li>
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_series/index/">Formato Series</a>
+                </li>
+            
+        </ul>
+        
+        
+        
+        
+        <ul>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/ejemplos/ine_ipv/">Ejemplos</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/ejemplos/ine_ipv/">Datos del INE</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/list_series/index/">Series</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/index/">Lista de Series</a>
+                                </li>
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/resumida/">Grupos de Series</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/updates/logs/">Logs</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/updates/logs/">Log de actualizaciones</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+        </ul>
+                      
+
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/changelog/">Change Log</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+		<section class="main">
+    <div class="page-header-nb">
+        
+            <h1 class="with-subtitle">Formato documentación</h1>
+                
+        
+        
+            <h2>Formato del archivo json que acompaña a la series</h2>
+        
+        <!-- 
+            <h6></h6>
+         -->
+    </div>
+    <article class="container series">
+        <p>Cada cuaderno debe llevar un archivo json con las documetación, con esta documetación se generará la págin web de documentación en este sitio.</p>
+
+<ul>
+  <li><strong class="blue"><em>entidad</em></strong> abreviatura del conjunto de datos (INE, REE, FOMENTO, BC)</li>
+  <li><strong class="blue"><em>nombre</em></strong> nombre largo de la entidad</li>
+  <li><strong class="blue"><em>descripcion</em></strong> descripción del conjunto de datos</li>
+  <li><strong class="blue"><em>fecha_inicio</em></strong> fecha de inicio de los datos</li>
+  <li><strong class="blue"><em>fecha_fin</em></strong> fecha final ó actual para dia actual/mes actual o año actual</li>
+  <li><strong class="blue"><em>periodicidad</em></strong> diaria, mensaula, trmestral, anual; esto es importante por que hay una github action que deberia actualizar la serie con esa periodicidad</li>
+  <li><strong class="blue"><em>ipynb</em></strong> nombre del archivo principal sin la extensión, el archivo csv se debe generar usando ese mismo nombre</li>
+  <li><strong class="blue"><em>csv</em></strong> nombre del archivo csv si es diferente del notebook, o el notebook genera más de un archivo de datos, en cuyo caso deben existir tantos json como archivos de datos</li>
+  <li><strong class="blue"><em>autor</em></strong> github account del mantenedor</li>
+  <li><strong class="blue"><em>enlaces_info</em></strong> (opcional) array de urls con información relevante</li>
+  <li>
+    <p><strong class="blue"><em>indicadores</em></strong> (minimo 1) array con los indicadores, para cada uno</p>
+
+    <ul>
+      <li><strong class="blue"><em>nombre</em></strong> nombre del indicador</li>
+      <li><strong class="blue"><em>descripcion</em></strong> descripción del indicador</li>
+      <li><strong class="blue"><em>unidad</em></strong> tipo de unidad, eur - euros, % - porcentaje, idx - index, idx_t - indice trimestral … separar con comas si hay más de una</li>
+      <li><strong class="blue"><em>enlaces_info</em></strong> (opcional) array de urls con información relevante</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="ejemplo-documentación">Ejemplo documentación</h2>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"entidad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INE"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indices precio vivienda"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"El Índice de Precios Industriales (IPRI) mide la evolución mensual de los precios de los productos fabricados por la industria y vendidos en el mercado interior en la primera etapa de su comercialización. El IPRI recoge los precios de venta a salida de fábrica obtenidos por los establecimientos industriales en las transacciones que éstos efectúan, excluyendo los gastos de transporte, comercialización, IVA y otros impuestos indirectos facturados. La cobertura del índice se extiende a todos los sectores industriales, excepto la construcción. Por tanto, investiga las industrias extractivas, manufactureras y de suministro de energía eléctrica, gas y agua. Para su obtención se realiza una encuesta continua que recoge todos los meses aproximadamente 28.000 precios de unos 1.500 productos, en una muestra cercana a los 9.000 establecimientos industriales. La información que se recoge son los precios vigentes el día 15 de cada mes."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"fecha_inicio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"01/01/2018"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"fecha_fin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mes actual"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"periodicidad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"trismestral"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ipynb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ine_ipv"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"autor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"csegura"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"enlaces_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">    
+    </span><span class="s2">"https://www.ine.es/"</span><span class="w">    
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"indicadores"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"General"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indice base 100 en 1995"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"unidad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idx_t"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vivienda nueva"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"unidad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idx_t"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"nombre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vivienda segunda mani"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"descripcion"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"unidad"</span><span class="p">:</span><span class="w"> </span><span class="s2">"idx_t"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+ 
+    </article>
+</section>
+<script>
+    document.getElementById("open-nav").addEventListener("click", function () {
+        document.body.classList.toggle("nav-open");
+    });
+</script>
+
+	</body>
+</html>

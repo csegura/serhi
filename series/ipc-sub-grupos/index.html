@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+ 
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+    <link rel="stylesheet" href="/serhi/css/main.css">
+    <link rel="apple-touch-icon" href="/serhi/assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/favicon.png">
+
+    
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'G-KNBRLHS09Z', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+</head>
+	<body>
+		<header>
+    <h1>
+        <a href="/serhi/"><img src="/serhi/assets/img/img.png" width="40" height="40" alt="SerHi logo"></a>
+        SerHi
+        <button type="button" class="open-nav" id="open-nav"></button>
+    </h1>
+
+    <form action="/serhi/search/" method="get">
+        <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+        <input type="submit" value="Search" style="display: none;">
+    </form>
+
+    <nav class="full-navigation">
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/"></a>
+            </li>
+        </ul>
+
+        
+        
+        <ul>           
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_json/index/">Formato documentación</a>
+                </li>
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_series/index/">Formato Series</a>
+                </li>
+            
+        </ul>
+        
+        
+        
+        
+        <ul>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/ejemplos/ine_ipv/">Ejemplos</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/ejemplos/ine_ipv/">Datos del INE</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/list_series/index/">Series</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/index/">Lista de Series</a>
+                                </li>
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/resumida/">Grupos de Series</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/updates/logs/">Logs</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/updates/logs/">Log de actualizaciones</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+        </ul>
+                      
+
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/changelog/">Change Log</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+		<section class="main">
+			<div class="page-header-nb series">
+    <span class="entidad badge-left">INE</span>
+    <a href="/serhi/docu/list_series/index/"><h4>IPC Sub-Grupos</h4></a>
+    <h3>ine_ipc</h3>
+    <div class="flex mb-10">
+        
+        <a href="https://raw.githubusercontent.com/csegura/serhi/main/data/process/ine/ine_ipc_g.csv" 
+        download="ine_ipc_g.csv" target="_blank">        
+            <div class="sbadge">
+    <div class="name">
+      <span>
+        download
+      </span>
+    </div>
+    <div class="status blue">
+      <span>
+        CSV
+      </span>
+    </div>
+</div>
+        </a>
+        
+        
+        <a href="/serhi/ipynb_pro/ipc-sub-grupos/">
+            <div class="sbadge">
+    <div class="name">
+      <span>
+        notebook
+      </span>
+    </div>
+    <div class="status green">
+      <span>
+        procesado
+      </span>
+    </div>
+</div>
+        </a>
+          
+       
+        
+            <a href="/serhi/ipynb_src/ipc-sub-grupos/">
+                <div class="sbadge">
+    <div class="name">
+      <span>
+        notebook
+      </span>
+    </div>
+    <div class="status orange">
+      <span>
+        original
+      </span>
+    </div>
+</div>        
+            </a>
+                
+    </div>
+</div>
+
+
+			<article class="container series">
+				<div>
+  <p>El Índice de Precios de Consumo (IPC) tiene como objetivo medir la evolución de los precios de los bienes y servicios de consumo adquiridos por los hogares residentes en España.</p>
+  <table>
+    <tr class="info">
+      <td>Fecha Inicio</td>
+      <td>Fecha Fin</td>
+      <td>Periodicidad</td>
+    </tr>
+    <tr class="info">
+      <td class="value">01/01/2002</td>
+      <td class="value">mes actual</td>
+      <td class="value">mensual</td>
+    </tr>
+    <tr>
+      <td colspan="3" >
+        <ul class="columns2">
+          
+          <li>
+            <small><a href="https://www.ine.es/">https://www.ine.es/</a></small>
+          </li>
+          
+          <li>
+            <small><a href="https://www.ine.es/dynt3/metadatos/es/RespuestaDatos.html?oe=30138">https://www.ine.es/dynt3/metadatos/es/RespuestaDatos.html?oe=30138</a></small>
+          </li>
+          
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <table>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>011 Alimentos</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>012 Bebidas no alcohólicas</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>021 Bebidas alcohólicas </h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>022 Tabaco</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>031 Vestido</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>032 Calzado y sus reparaciones</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>041 Alquiler de vivienda</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>043 Conservación y reparación de la vivienda</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>044 Suministro de agua y otros servicios relacionados con la vivienda</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>045 Electricidad, gas y otros combustibles</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>051 Muebles y accesorios, alfombras y otros revestimientos de suelos</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>052 Artículos textiles para el hogar</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>053 Aparatos domésticos</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>054 Cristalería, vajilla y utensilios para el hogar</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>055 Herramientas y equipos para el hogar y el jardín  </h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>056 Bienes y servicios para el mantenimiento corriente del hogar</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>061 Productos, aparatos y equipos médicos</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>062 Servicios ambulatorios</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>063 Servicios hospitalarios</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>071 Adquisición de vehículos</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>072 Utilización de vehículos personales</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>073 Servicios de transporte</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>082 Equipos de telefonía y fax</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>083 Servicios de telefonía y fax</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>091 Equipos audiovisuales, fotográficos y de procesamiento de información</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>093 Otros artículos y equipos para ocio, jardinería y animales domésticos</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>094 Servicios recreativos, deportivos y culturales</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>095 Prensa, libros y artículos de papelería</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>096 Paquetes turísticos</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>101 Enseñanza Infantil y Primaria</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>102 Enseñanza Secundaria'</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>104 Enseñanza Superior</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>105 Enseñanza no definida por nivel</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>111 Restauración y comedores</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>112 Servicios de alojamiento '</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>121 Cuidado personal</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>123 Efectos personales n.c.o.p.'</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>124 Protección social</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>125 Seguros'</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>126 Servicios financieros n.c.o.p.</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td>
+        
+        
+
+    <span class="unidad idx">
+        idx 
+    </span>
+
+    <span class="unidad idx_va">
+        idx_va 
+    </span>
+
+    <span class="unidad idx_vm">
+        idx_vm 
+    </span>
+
+    <span class="unidad idx_vaa">
+        idx_vaa 
+    </span>
+
+        <h6>127 Otros servicios n.c.o.</h6>
+      </td>
+      <td>
+        <br />
+        
+      </td>
+    </tr>
+    
+  </table>
+</div>
+
+			</article>
+		</section>
+	</body>
+</html>

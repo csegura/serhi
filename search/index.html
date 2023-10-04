@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+ 
+<html>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+    <link rel="stylesheet" href="/serhi/css/main.css">
+    <link rel="apple-touch-icon" href="/serhi/assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/touch-icon.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/serhi/assets/icon/favicon.png">
+
+    
+        <script>
+            window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+            ga('create', 'G-KNBRLHS09Z', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+</head>
+	<body>
+		<header>
+    <h1>
+        <a href="/serhi/"><img src="/serhi/assets/img/img.png" width="40" height="40" alt="SerHi logo"></a>
+        SerHi
+        <button type="button" class="open-nav" id="open-nav"></button>
+    </h1>
+
+    <form action="/serhi/search/" method="get">
+        <input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+        <input type="submit" value="Search" style="display: none;">
+    </form>
+
+    <nav class="full-navigation">
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/"></a>
+            </li>
+        </ul>
+
+        
+        
+        <ul>           
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_json/index/">Formato documentación</a>
+                </li>
+            
+                <li class="nav-item top-level ">                     
+                   <a href="/serhi/docu/doc_series/index/">Formato Series</a>
+                </li>
+            
+        </ul>
+        
+        
+        
+        
+        <ul>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/ejemplos/ine_ipv/">Ejemplos</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/ejemplos/ine_ipv/">Datos del INE</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/list_series/index/">Series</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/index/">Lista de Series</a>
+                                </li>
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/list_series/resumida/">Grupos de Series</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+                <li class="nav-item top-level "> 
+                    
+                    
+                        <a href="/serhi/docu/updates/logs/">Logs</a>
+                        <ul>
+                            
+                            
+                                <li class="nav-item ">
+                                    <a href="/serhi/docu/updates/logs/">Log de actualizaciones</a>
+                                </li>
+                            
+                        </ul>
+                                        
+                </li>
+            
+        </ul>
+                      
+
+        <ul>
+            <li class="nav-item top-level ">
+                
+                <a href="/serhi/changelog/">Change Log</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+		<section class="main">
+    <div class="page-header-nb">
+        
+            <h1>Search</h1>
+                
+        
+            <h2>other</h2>    
+        
+        
+        <!-- 
+            <h6></h6>
+         -->
+    </div>
+    <article class="container series">
+        <p><span id="search-process">Loading</span> results <span id="search-query-container" style="display: none;">for "<strong id="search-query"></strong>"</span></p>
+<ul id="search-results"></ul>
+
+<script>
+	window.data = {
+		
+			
+				
+					
+					
+
+					"docu-doc-json-index": {
+						"id": "docu-doc-json-index",
+						"title": "Formato documentación",
+						"category": "",
+						"url": " /docu/doc_json/index/",
+						"content": "Cada cuaderno debe llevar un archivo json con las documetación, con esta documetación se generará la págin web de documentación en este sitio. entidad abreviatura del conjunto de datos (INE, REE, FOMENTO, BC) nombre nombre largo de la entidad descripcion descripción del conjunto de datos fecha_inicio fecha de inicio de los datos fecha_fin fecha final ó actual para dia actual mes actual o año actual periodicidad diaria, mensaula, trmestral, anual; esto es importante por que hay una github action que deberia actualizar la serie con esa periodicidad ipynb nombre del archivo principal sin la extensión, el archivo csv se debe generar usando ese mismo nombre csv nombre del archivo csv si es diferente del notebook, o el notebook genera más de un archivo de datos, en cuyo caso deben existir tantos json como archivos de datos autor github account del mantenedor enlaces_info (opcional) array de urls con información relevante indicadores (minimo 1) array con los indicadores, para cada uno nombre nombre del indicador descripcion descripción del indicador unidad tipo de unidad, eur - euros, % - porcentaje, idx - index, idx_t - indice trimestral … separar con comas si hay más de una enlaces_info (opcional) array de urls con información relevante Ejemplo documentación { \"entidad\": \"INE\", \"nombre\": \"Indices precio vivienda\", \"descripcion\": \"El Índice de Precios Industriales (IPRI) mide la evolución mensual de los precios de los productos fabricados por la industria y vendidos en el mercado interior en la primera etapa de su comercialización. El IPRI recoge los precios de venta a salida de fábrica obtenidos por los establecimientos industriales en las transacciones que éstos efectúan, excluyendo los gastos de transporte, comercialización, IVA y otros impuestos indirectos facturados. La cobertura del índice se extiende a todos los sectores industriales, excepto la construcción. Por tanto, investiga las industrias extractivas, manufactureras y de suministro de energía eléctrica, gas y agua. Para su obtención se realiza una encuesta continua que recoge todos los meses aproximadamente 28.000 precios de unos 1.500 productos, en una muestra cercana a los 9.000 establecimientos industriales. La información que se recoge son los precios vigentes el día 15 de cada mes.\", \"fecha_inicio\": \"01 01 2018\", \"fecha_fin\": \"mes actual\", \"periodicidad\": \"trismestral\", \"ipynb\": \"ine_ipv\", \"autor\": \"csegura\", \"enlaces_info\": [ \"https: www.ine.es \" ], \"indicadores\": [ { \"nombre\": \"General\", \"descripcion\": \"Indice base 100 en 1995\", \"unidad\": \"idx_t\" }, { \"nombre\": \"Vivienda nueva\", \"descripcion\": \"\", \"unidad\": \"idx_t\" }, { \"nombre\": \"Vivienda segunda mani\", \"descripcion\": \"\", \"unidad\": \"idx_t\" } ] }"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"docu-doc-series-index": {
+						"id": "docu-doc-series-index",
+						"title": "Formato Series",
+						"category": "",
+						"url": " /docu/doc_series/index/",
+						"content": "Estructura de las series (v0.01) Campo Datos Date Fecha del valor Name Nombre de a serie Value Valor Ud Unidad [idx,ud,eur,%] Set Nombre del conjunto de datos (REE, INE … ) Ud idx - index idx_t - index trimestral idx_vm - index variación mensual idx_va - index variación anual idx_vaa - index año actual indicador - indicador eur - euros % - porcentaje"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"docu-ejemplos-ine-ipv": {
+						"id": "docu-ejemplos-ine-ipv",
+						"title": "Datos del INE",
+						"category": "",
+						"url": " /docu/ejemplos/ine_ipv/",
+						"content": "Importamos las cabeceras, solo están disponibles unos pocos paquetes ya que la misión principal es recuperar y transformar datos, y generalmente esto lo hago usando pandas, las últimas líneas son necesarias para importar una biblioteca con los paths, los notebooks los uso desde visual studio (conectado a un servidor ipython remoto), o directamente en jupyter en el servidor remoto y por último los tiene que procesar github en el workflow, en su docker %load_ext autoreload %autoreload 2 import json import os import re import sys from datetime import date from pathlib import Path import matplotlib.dates as mdates import matplotlib.pyplot as plt import pandas as pd import requests cwd = Path.cwd() home = Path.home() module_path = f\"{home} serhi src lib\" if cwd == home else f\"{cwd.parents[1]} lib\" sys.path.append(module_path) import serhi En esta celda pondremos e nombre de la entidad y el nombre del notebook sin extensión # inicio # cambiar como corresponda ENTITY = 'ine' NB_NAME = 'ine_indices' Con esta línea inicializamos la biblioteca de serhi, que establece las rutas donde deben gardarse los archivos serhi.init(ENTITY, NB_NAME, Path.cwd().parents[0]) la salida de la celda anterior en un entorno local será algo como esto, una recopilación de las diferentes rutas SerHi Tools dir home node serhi src entidades serhi.CWD home node serhi src entidades ine serhi.BASE_PATH .. .. .. serhi.DATA_PATH .. .. .. data process ine serhi.DOWN_PATH .. .. .. tmp download ine serhi.OUT_FILE .. .. .. data process ine ine_indices.csv descargamos datos del instituto nacional de estadistica, los indices del precio de la vivienda, la rura donde se guardará el archivo sergi.DOWN_PATH def download_files(urls): for loc in urls: url = loc['url'] r = requests.get(url, allow_redirects=True) print(f'Downloading {url}') open(serhi.DOWN_PATH + loc['file'], 'wb').write(r.content) urls = [ { # indices precios vivienda 'url':'https: www.ine.es jaxiT3 files t es xlsx 25171.xlsx?nocab=1', 'file':'ine_ipv.xlsx' }, ] download_files(urls) leemos el archivo descargado df = pd.DataFrame() loc = urls[0] file = loc['file'] df = pd.read_excel(serhi.DOWN_PATH + file, skiprows=7, nrows=76) vemos lo que tenemos 2022T2 2022T1 2021T4 2021T3 2021T2 2021T1 0 Nacional NaN NaN NaN NaN NaN NaN 1 General 141.433 138.742 135.291 133.652 130.937 127.831 2 Vivienda nueva 153.51 153.365 148.64 145.073 141.088 106.098 3 Vivienda segun. 139.707 136.511 133.292 132.009 105.803 104.067 4 01 Andalucía NaN NaN NaN NaN NaN NaN 5 rows × 24 columns desc desc"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"docu-list-series-index": {
+						"id": "docu-list-series-index",
+						"title": "Lista de Series",
+						"category": "",
+						"url": " /docu/list_series/index/",
+						"content": ""
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"docu-list-series-resumida": {
+						"id": "docu-list-series-resumida",
+						"title": "Grupos de Series",
+						"category": "",
+						"url": " /docu/list_series/resumida/",
+						"content": "INE Índices de producción industrial ine_ipri El Índice de Precios Industriales (IPRI) mide la evolución mensual de los precios de los producto... inicio 01 01 2018 fin mes actual periodicidad mensual INE Indices precio vivienda ine_ipv El Índice de Precios Industriales (IPRI) mide la evolución mensual de los precios de los producto... inicio 01 01 2018 fin mes actual periodicidad trimestral IBEX Índice general Ibex 35 Mensual ibex_indice_general inicio 12 07 1993 fin mes actual periodicidad mensual INE IPC Grupos ine_ipc El Índice de Precios de Consumo (IPC) tiene como objetivo medir la evolución de los precios de lo... inicio 01 01 2002 fin mes actual periodicidad mensual REE Red Electrica Española ree_componentes_precio_energia Componentes precio energia extraidos de la api apidatos inicio 01 01 2014 fin mes actual periodicidad mensual INE IPC Sub-Grupos ine_ipc El Índice de Precios de Consumo (IPC) tiene como objetivo medir la evolución de los precios de lo... inicio 01 01 2002 fin mes actual periodicidad mensual IBEX Índice general Ibex 35 ibex_indice_general inicio 12 07 1993 fin mes actual periodicidad diaria BDE Banco de España bde_tipos_interes Información de tipos de interés legales y otros tipos utilizados como referencia, estadísticas de... inicio 01 01 1973 fin mes actual periodicidad mensual"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"docu-updates-logs": {
+						"id": "docu-updates-logs",
+						"title": "Log de actualizaciones",
+						"category": "",
+						"url": " /docu/updates/logs/",
+						"content": "File Update Result ree_componentes_precio_energia.ipynb 2023-10-04 07:57:01 OK ine_ipri.ipynb 2023-10-04 08:00:20 OK ine_ipv.ipynb 2023-10-04 08:00:41 OK ibex_indice_general.ipynb 2023-10-04 07:57:09 OK Actualizados"
+					}
+
+					
+				
+			
+		
+	};
+</script>
+<script src="/serhi/scripts/lunr.min.js"></script>
+<script src="/serhi/scripts/search.js"></script>
+ 
+    </article>
+</section>
+<script>
+    document.getElementById("open-nav").addEventListener("click", function () {
+        document.body.classList.toggle("nav-open");
+    });
+</script>
+
+	</body>
+</html>
