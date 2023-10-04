@@ -7,10 +7,10 @@ order: 1
 
 File  | Update | Result
 ------|--------|-------
-ree_componentes_precio_energia.ipynb | 2023-03-17 08:50:45 | OK
-ine_ipri.ipynb | 2023-03-17 08:55:06 | OK
-ine_ipv.ipynb | 2023-03-17 08:54:39 | OK
-ibex_indice_general.ipynb | 2023-03-17 08:49:54 | OK
+ree_componentes_precio_energia.ipynb | 2023-10-04 07:57:01 | OK
+ine_ipri.ipynb | 2023-10-04 08:00:20 | OK
+ine_ipv.ipynb | 2023-10-04 08:00:41 | OK
+ibex_indice_general.ipynb | 2023-10-04 07:57:09 | OK
 
 > Actualizados
 {: .prompt-tip }
